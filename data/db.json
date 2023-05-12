@@ -1,0 +1,25 @@
+{
+  "tickets": [
+    {
+      "ticketName": "Website content is not showing",
+      "ticketErrorMessage": "404 Error",
+      "platform": "Wordpress",
+      "user": "jin Yang",
+      "id": 1
+    },
+    {
+      "ticketName": "Cannot access my website",
+      "ticketErrorMessage": "504 Error Message",
+      "platform": "Shopify",
+      "user": "Eric B",
+      "id": 2
+    },
+    {
+      "ticketName": "Content is not displaying properly",
+      "ticketErrorMessage": "NA",
+      "platform": "Squarespace",
+      "user": "Gilfoyle",
+      "id": 3
+    }
+  ]
+}
