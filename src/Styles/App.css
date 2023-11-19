@@ -1,0 +1,952 @@
+body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.App {
+    text-align: center;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+}
+
+.rootLayout {
+    max-width: 100vw;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+}
+
+.mainLayout {
+    position: relative;
+    width: inherit;
+    height: inherit;
+    display: flex;
+    margin: 0 auto;
+    background-color: #eeeeee;
+}
+
+/* <--REACT-COMPONENTS --> */
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* <--NAVBAR --> */
+
+.topRightHeader {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888888;
+    font-size: 0.8rem;
+}
+
+.displayPicture {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.altDisplayPicture {
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+}
+
+.altDisplayPicture,
+.altChatdp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: rgb(146, 75, 17);
+    text-transform: capitalize;
+    color: white;
+}
+
+.notificationIcon {
+    font-size: 1.3rem;
+    margin: 0 20px;
+    color: #011325;
+    background-color: white;
+    border-radius: 50%;
+    padding: 6px;
+    -webkit-box-shadow: 0px 7px 17px -4px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 7px 17px -4px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 7px 17px -4px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.navbar {
+    height: 98%;
+    width: 12%;
+    border-radius: 20px;
+    background: #011325;
+    color: white;
+    margin: 10px 0px 0px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.Links {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 40%;
+}
+
+.navLink {
+    display: flex;
+    position: relative;
+    justify-content: normal;
+    align-items: center;
+}
+
+.navbar a {
+    z-index: 10;
+    color: white;
+    font-size: 1.5rem;
+    padding: 10px 30px;
+}
+
+.navbar a:hover {
+    color: rgb(13, 184, 199);
+}
+
+.activeNav {
+    border-radius: 6px;
+    background-color: white;
+    /*     -webkit-box-shadow: inset 0px -7px 24px -7px rgba(0, 0, 0, 0.53);
+    -moz-box-shadow: inset 0px -7px 24px -7px rgba(0, 0, 0, 0.53);
+    box-shadow: inset 0px -7px 24px -7px rgba(0, 0, 0, 0.53); */
+    color: #555555 !important;
+}
+
+.navLinkTitle {
+    margin-left: 10px;
+    font-size: 1rem !important;
+}
+
+.page {
+    width: 88%;
+    height: 97vh;
+    position: relative;
+    top: 0px;
+    padding-top: 22px;
+    background: #eeeeee;
+}
+
+.pageHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
+.previousBtn {
+    position: absolute;
+    top: 60px;
+    left: 34px;
+    font-size: 2rem;
+    color: rgb(13, 184, 199);
+}
+
+.pageContent {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 70%;
+    margin: 0 auto;
+    height: 640px;
+    top: 50%;
+    left: 50%;
+    background-color: white;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 7px 17px -4px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 7px 17px -4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 7px 17px -4px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+}
+
+.navProfileLink {
+    display: block;
+    margin-bottom: 20px;
+    align-self: center;
+}
+
+.appLogo {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    width: 35%;
+}
+
+#displayName {
+    font-size: 1rem;
+    color: white;
+    text-transform: capitalize;
+}
+
+/* <--LOGIN --> */
+
+.authWrapper {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-self: end;
+    background-color: white;
+}
+
+.signUpPage,
+.loginPage {
+    width: 1000px;
+    height: 600px;
+    border-radius: 10px;
+    background: gray;
+    background-image: url("https://ukinvestormagazine.co.uk/wp-content/uploads/2022/09/HANetf-digital-economy-.jpeg");
+    background-size: auto 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 10px 10px 21px -14px rgba(0, 0, 0, 0.75);
+}
+
+.appName {
+    color: white;
+    align-self: end;
+    margin-left: 26px;
+}
+
+.navbar .appName {
+    align-self: normal;
+    margin-left: -4px;
+    margin-top: 45px;
+}
+
+#loginBtn,
+.createTicketButton {
+    width: 120px;
+    border: none;
+    padding: 10px 0;
+    border-radius: 10px;
+    background-color: #555555;
+    margin: 16px 0;
+    color: white;
+}
+
+#googleLogin {
+    background-color: rgb(225, 225, 225) !important;
+    box-shadow: 10px 10px 21px -14px rgba(0, 0, 0, 0.75);
+    color: #292929 !important;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.createTicketButton {
+    margin-top: 50px !important;
+}
+
+#signUpBtn {
+    text-decoration: underline;
+}
+
+#googleLogin {
+    margin-top: 50px;
+    background-color: #494949;
+    color: white;
+    border: 0px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* <--DASHBOARD --> */
+
+.welcomeMessage {
+    margin-left: 70px;
+    text-align: left;
+    margin-bottom: -20px;
+}
+
+.myTickets {
+    color: #555555;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 50% 1fr;
+    padding-top: 45px;
+    min-height: 100%;
+}
+
+.Stats {
+    max-height: 90%;
+}
+
+.statsContainer {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 45% 0.8fr;
+    grid-template-rows: 400px;
+}
+
+.statsRight {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 10px;
+    width: 80%;
+    justify-self: start;
+}
+
+#slaPercentage {
+    color: #ffffff;
+    font-weight: bold;
+    height: 100%;
+    width: 90%;
+    background: rgb(115, 235, 245);
+    background: linear-gradient(
+        162deg,
+        rgba(115, 235, 245, 1) 0%,
+        rgba(172, 68, 198, 1) 48%,
+        rgba(252, 166, 94, 1) 100%
+    );
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 7px 17px -4px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 7px 17px -4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 7px 17px -4px rgba(0, 0, 0, 0.25);
+}
+
+.circularPercentage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 224px;
+    height: 224px;
+    margin: 42px auto;
+
+    border-radius: 50%;
+    /* background: conic-gradient(#ffffff 270deg, transparent 0deg); */
+}
+
+.circularPercentage::before {
+    content: "";
+    position: absolute;
+    height: 188px;
+    width: 188px;
+    border-radius: 50%;
+    background: rgb(115, 235, 245);
+    background: linear-gradient(
+        162deg,
+        rgba(115, 235, 245, 1) 0%,
+        rgba(172, 68, 198, 1) 48%,
+        rgba(252, 166, 94, 1) 100%
+    );
+}
+
+.percentageValue {
+    position: relative;
+    color: #ffffff;
+    font-size: 2rem;
+}
+
+#ticketCount,
+#openTicketCount,
+#resolvedTicketCount {
+    position: relative;
+    overflow: hidden;
+    color: #555555;
+    height: 100%;
+    width: 95%;
+    background: #ffffff;
+    border-radius: 10px;
+}
+
+.charts {
+    display: flex;
+    width: 100%;
+}
+
+.ticketsByPlatformChart {
+    margin-top: 40px;
+    width: 60%;
+    height: auto;
+    border-radius: 10px;
+    z-index: 20;
+}
+
+.ticketsByPriorityChart {
+    position: relative;
+    margin-top: 40px;
+    width: 60%;
+    height: 300px;
+    justify-self: start;
+    border-radius: 10px;
+    z-index: 30;
+    padding: 0;
+}
+
+.ticketsByPlatformLabel,
+.ticketsByPriorityLabel {
+    font-weight: bold;
+    color: #555555;
+}
+
+.ticketsByPriorityLabel {
+    margin-bottom: -50px;
+}
+
+.ticketsByPriortiyKey {
+    display: flex;
+    margin-top: -30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.chartKey {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.chartKey .platformImg {
+    width: 30px;
+    height: 30px;
+}
+
+/* <--TICKETS --> */
+
+.ticketListHeader {
+    display: flex;
+    justify-content: space-around;
+    padding: 0px;
+}
+
+.ticketList {
+    border-radius: 10px;
+    width: 85%;
+    max-height: 80vh;
+    margin: 0 auto;
+    background-color: white;
+    padding: 15px;
+}
+
+.ticketNav {
+    padding: 10px 0;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+    background-color: #f3f3f3;
+    color: #011325;
+    width: 100%;
+    border-radius: 6px;
+}
+
+.ticketNav li {
+    display: block;
+    cursor: pointer;
+}
+
+.ticketNav li:hover {
+    font-weight: bold;
+}
+
+.active {
+    font-weight: bold;
+    text-decoration: solid underline rgb(13, 184, 199) 4px;
+    text-underline-offset: 4px;
+}
+
+.ticketQuery {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+.searchBar {
+    border: none;
+    margin-left: 5px;
+    width: 100%;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding: 6px 10px;
+    width: 55%;
+    border: 1px solid #cdcdcd;
+}
+
+.sortByLabel {
+    font-weight: 600;
+}
+
+.sortBySelect {
+    border: none;
+}
+
+.tabContent {
+    height: 70%;
+    overflow-y: scroll;
+    padding-bottom: 13px;
+}
+
+/* width */
+.tabContent::-webkit-scrollbar {
+    width: 3px;
+}
+
+/* Track */
+.tabContent::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: rgb(222, 222, 222);
+}
+
+/* Handle */
+.tabContent::-webkit-scrollbar-thumb {
+    background: #a5a5a5;
+    height: 10px;
+    visibility: hidden;
+}
+
+.tabContent:hover,
+.tabContent::-webkit-scrollbar-thumb {
+    visibility: visible;
+}
+
+.ticketTimestamp {
+    text-align: end;
+}
+
+#noTicketsPrompt {
+    color: rgb(201, 201, 201);
+    margin-top: 70px;
+}
+
+.newTicket {
+    background: rgb(13, 184, 199);
+    color: white;
+    border-radius: 10px;
+    padding: 2px 10px;
+    -webkit-box-shadow: 0px 7px 17px -4px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 7px 17px -4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 7px 17px -4px rgba(0, 0, 0, 0.25);
+}
+
+#loadingWheel {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #18ac15;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin: 40px auto;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* <--Ticket Details --> */
+
+.ticketPreview {
+    padding: 15px 40px;
+    width: auto;
+    border-bottom: 1px solid rgb(222, 222, 222);
+    display: flex;
+    justify-content: space-between;
+}
+
+.ticketPreview:hover {
+    -webkit-box-shadow: 13px 15px 24px -13px rgba(0, 0, 0, 0.53);
+    -moz-box-shadow: 13px 15px 24px -13px rgba(0, 0, 0, 0.53);
+    box-shadow: 13px 15px 24px -13px rgba(0, 0, 0, 0.53);
+}
+
+.ticketPreviewLeft {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.platformImg {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    background-color: white;
+    background: white;
+}
+
+.ticketName,
+.ticketPlatform,
+.ticketState {
+    margin: 0px;
+    text-transform: capitalize;
+}
+
+.ticketState {
+    color: #555555;
+    font-size: 0.7rem;
+    text-transform: capitalize;
+}
+
+.ticketPreviewDetails {
+    margin-left: 10px;
+}
+
+.platformImg {
+    align-self: center;
+    height: 38px;
+    width: 38px;
+    border-radius: 10px;
+}
+
+.ticketDetails {
+    display: flex;
+}
+
+.ticketInfo {
+    position: relative;
+    width: auto;
+    height: 100%;
+    text-align: left;
+    background: #ffffff;
+    color: #292929;
+    padding-left: 25px;
+    z-index: 5;
+    -webkit-box-shadow: 0px 7px 17px -4px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 7px 17px -4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 7px 17px -4px rgba(0, 0, 0, 0.25);
+}
+
+.ticketImages {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.ticketImage {
+    height: 50px;
+}
+
+.modal,
+.overlay {
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    z-index: 20;
+}
+
+.overlay {
+    background-color: rgba(64, 64, 64, 0.8);
+}
+
+.modalContent {
+    border: solid white 10px;
+    border-radius: 10px;
+    width: 500px;
+    height: fit-content;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: white;
+    transform: translate(-50%, -50%);
+}
+
+.modalImage {
+    width: 100%;
+}
+
+.closeModal {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    height: 32px;
+    width: 32px;
+    background-color: white;
+    border: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: rgb(141, 0, 0);
+    -webkit-box-shadow: 0px 7px 17px -4px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 7px 17px -4px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 7px 17px -4px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.ticketBorder,
+.statBorder {
+    position: absolute;
+    left: 0;
+    width: 10px;
+    height: 100%;
+}
+
+.ticketBorder {
+    background: rgb(115, 235, 245);
+    background: linear-gradient(
+        342deg,
+        rgba(115, 235, 245, 1) 0%,
+        rgba(172, 68, 198, 1) 50%,
+        rgba(252, 166, 94, 1) 100%
+    );
+}
+
+.statBorder {
+    background: #555555;
+}
+.resolvedBtn {
+    border: 0px;
+    position: absolute;
+    left: 24px;
+    bottom: 10px;
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #c9c9c9;
+    color: white;
+}
+
+.ticketRef {
+    text-transform: uppercase;
+    padding-right: 10px;
+}
+
+.infoKey {
+    font-weight: bold;
+    font-size: 0.8rem;
+    color: black;
+}
+
+.ticketInfo p {
+    color: #292929;
+}
+
+.attachments button {
+    width: 90px;
+    border: none;
+    padding: 10px 0;
+    border-radius: 10px;
+    background-color: rgb(13, 184, 199);
+    margin: 16px 0;
+    color: white;
+    cursor: pointer;
+}
+
+.attachmentsLabel {
+    margin-top: 50px;
+}
+
+.fileUpload {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #a5a5a5;
+}
+
+/* <--NEW TICKET FORM --> */
+
+.newTicketForm {
+    align-self: center;
+}
+
+.newTicketFormRow {
+    border: 0;
+    border-radius: 2px;
+    padding: 10px 0;
+    margin-top: 20px;
+    margin-left: 10px;
+    text-align: center;
+    border-bottom: 1px solid #a5a5a5;
+}
+
+::placeholder {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    color: #888888;
+    font-size: 0.85rem;
+}
+
+.platformLabel,
+.priorityLabel {
+    margin-left: 10px;
+    color: #888888;
+    font-size: 0.85rem;
+}
+
+/* <--CHAT MESSAGES --> */
+
+.messages {
+    position: relative;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    margin: 0 1;
+}
+
+#noMessagePrompt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.messages-wrapper {
+    text-align: center;
+    height: 93%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.sendMessage {
+    padding: 15px 0;
+    width: 100%;
+    background: white;
+}
+
+#messageInput {
+    width: 85%;
+    margin-right: 5px;
+    border: 0px;
+    padding: 8px 0;
+}
+
+#sendButton {
+    border: 0px;
+    background-color: #555555;
+    color: white;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+/* <--Message Bubble --> */
+
+.chatBubble {
+    border-radius: 10px;
+    background-color: rgb(228, 228, 228);
+    color: rgb(79, 79, 79);
+    width: 70%;
+    height: auto;
+    margin: 14px auto;
+    position: relative;
+    text-align: center;
+    word-wrap: break-word;
+    display: flex;
+    align-items: center;
+}
+
+.right {
+    right: 8%;
+}
+
+.left {
+    left: 8%;
+    background-color: #011325;
+    color: white !important;
+}
+
+.chatDp,
+.altChatdp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-left: 10px;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.chatContent {
+    margin-left: 10px;
+    padding-right: 10px;
+}
+
+.userName {
+    text-align: left;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin: 0;
+    position: relative;
+    top: 10px;
+}
+
+.userMessage {
+    text-align: left;
+}
+
+/* <--FORM --> */
+
+.formRow {
+    display: block;
+    margin: 20px auto;
+    padding: 4px 0;
+    border-bottom: 2px;
+}
+
+/* <-- PROFILE --> */
+
+.myProfile .pageContent {
+    width: 40%;
+}
+
+.myProfileContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.myProfileContent .displayPicture {
+    width: 100px;
+    height: 100px;
+}
+
+.myProfileContent .altDisplayPicture {
+    width: 100px;
+    height: 100px;
+    font-size: 4rem;
+}
+
+.myProfileLabel {
+    margin-bottom: 32px;
+}
